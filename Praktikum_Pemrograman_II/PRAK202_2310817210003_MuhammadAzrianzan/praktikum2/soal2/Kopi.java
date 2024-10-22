@@ -18,7 +18,7 @@ public class Kopi {
 	public void info() {
 		System.out.println("Nama Kopi: " + this.namaKopi);
 		System.out.println("Ukuran: " + this.ukuran);
-		System.out.println("Harga: " + this.harga);
+		System.out.println("Harga: Rp. " + this.harga);
 	}
 	
 	public double getPajak() {
