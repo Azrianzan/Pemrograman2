@@ -55,7 +55,7 @@ public class Main {
 	}
 	
 	private static void cariMahasiswaByNim() {
-		System.out.print("Masukkan NIM Mahasiswa yang akan dihapus: ");
+		System.out.print("Masukkan NIM Mahasiswa yang akan dicari: ");
 		String nim = scanner.nextLine();
 		for (Mahasiswa mhs : listMahasiswa) {
 			if (mhs.getNim().equalsIgnoreCase(nim)) {
