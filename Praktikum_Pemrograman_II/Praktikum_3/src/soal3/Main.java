@@ -49,10 +49,9 @@ public class Main {
 			if (mhs.getNim().equalsIgnoreCase(nim)) {
 				listMahasiswa.remove(mhs);
 				System.out.println("Mahasiswa dengan NIM " + mhs.getNim() + " dihapus");
-			} else {
-				System.out.println("Mahasiswa tidak ditemukan");
 			}
 		}
+		System.out.println("Mahasiswa tidak ditemukan");
 	}
 	
 	private static void cariMahasiswaByNim() {
