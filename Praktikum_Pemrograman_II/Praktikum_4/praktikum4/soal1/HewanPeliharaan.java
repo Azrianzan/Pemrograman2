@@ -17,7 +17,7 @@ public class HewanPeliharaan {
 		return this.ras;
 	}
 	
-	public void dislay() {
+	public void display() {
 		System.out.println("Detail Hewan Peliharaan:");
 		System.out.println("Nama hewan peliharaanku adalah : " + this.getNama());
 		System.out.println("Dengan ras : " + this.getRas());
