@@ -44,6 +44,8 @@ public class Soal2Main {
 			Anjing ajg1 = new Anjing(ras, nama, warnaBulu, listKemampuan);
 			
 			ajg1.displayDetailAnjing();
+		} else {
+			System.out.println("Masukkan Pilihan Dengan Benar");
 		}
 	}
 }
