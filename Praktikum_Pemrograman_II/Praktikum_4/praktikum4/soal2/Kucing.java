@@ -15,7 +15,7 @@ public class Kucing extends HewanPeliharaan{
 	}
 	
 	public void displayDetailKucing() {
-		super.dislay();
+		super.display();
 		System.out.println("Memiliki warna bulu : " + this.getWarnaBulu());
 	}
 }
