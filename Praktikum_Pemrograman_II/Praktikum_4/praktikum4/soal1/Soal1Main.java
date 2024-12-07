@@ -13,6 +13,6 @@ public class Soal1Main {
 		
 		HewanPeliharaan hwn1 = new HewanPeliharaan(ras, nama);
 		
-		hwn1.dislay();
+		hwn1.display();
 	}
 }
