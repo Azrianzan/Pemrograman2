@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DatabaseController">
+    <!-- Tab Data Pelanggan -->
+    <Tab text="Data Pelanggan">
+        <AnchorPane>
+            <VBox layoutX="10" layoutY="10" prefHeight="380" prefWidth="580" spacing="10">
+                <!-- Form Input -->
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Nama:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="namaPelangganField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    
+                    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="emailPelangganField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    
+                    <Label text="Telepon:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="teleponPelangganField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="addPelangganButton" onAction="#addPelanggan" text="Add" />
+                    <Button fx:id="editPelangganButton" onAction="#editPelanggan" text="Edit" />
+                    <Button fx:id="deletePelangganButton" onAction="#deletePelanggan" text="Delete" />
+                </HBox>
+
+                <!-- Table -->
+                <TableView fx:id="pelangganTable" prefHeight="200" prefWidth="580">
+                    <columns>
+                        <TableColumn fx:id="namaColumn" prefWidth="196.0" text="Nama" />
+                        <TableColumn fx:id="emailColumn" prefWidth="228.0" text="Email" />
+                        <TableColumn fx:id="teleponColumn" prefWidth="155.0" text="Telepon" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+
+    <!-- Tab Data Buku -->
+    <Tab text="Data Buku">
+        <AnchorPane>
+            <VBox layoutX="10" layoutY="10" prefHeight="380" prefWidth="580" spacing="10">
+                <!-- Form Input -->
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Judul:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="judulBukuField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    
+                    <Label text="Penulis:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="penulisBukuField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    
+                    <Label text="Harga:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="hargaBukuField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    
+                    <Label text="Stok:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <TextField fx:id="stokBukuField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="addBukuButton" onAction="#addBuku" text="Add" />
+                    <Button fx:id="editBukuButton" onAction="#editBuku" text="Edit" />
+                    <Button fx:id="deleteBukuButton" onAction="#deleteBuku" text="Delete" />
+                </HBox>
+
+                <!-- Table -->
+                <TableView fx:id="bukuTable" prefHeight="200" prefWidth="580">
+                    <columns>
+                        <TableColumn fx:id="judulColumn" prefWidth="219.0" text="Judul" />
+                        <TableColumn fx:id="penulisColumn" prefWidth="187.0" text="Penulis" />
+                        <TableColumn fx:id="hargaColumn" prefWidth="102.0" text="Harga" />
+                        <TableColumn fx:id="stokColumn" prefWidth="71.0" text="Stok" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+
+    <!-- Tab Data Penjualan -->
+    <Tab text="Data Penjualan">
+        <AnchorPane>
+            <VBox layoutX="10" layoutY="10" prefHeight="380" prefWidth="580" spacing="10">
+                <!-- Form Input -->
+                <GridPane hgap="10" vgap="10">
+                    <Label text="Jumlah:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="IDPelangganField" GridPane.columnIndex="5" />
+                    
+                    <Label text="Tanggal:" GridPane.rowIndex="1" />
+                    <TextField fx:id="tanggalPenjualanField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label text="ID Pelanggan:" GridPane.columnIndex="4" />
+               <Label text="ID Buku:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               <TextField fx:id="jumlahPenjualanField" GridPane.columnIndex="1" />
+               <TextField fx:id="IDBukuField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="10">
+                    <Button fx:id="addPenjualanButton" onAction="#addPenjualan" text="Add" />
+                    <Button fx:id="editPenjualanButton" onAction="#editPenjualan" text="Edit" />
+                    <Button fx:id="deletePenjualanButton" onAction="#deletePenjualan" text="Delete" />
+                </HBox>
+
+                <!-- Table -->
+                <TableView fx:id="penjualanTable" prefHeight="200" prefWidth="580">
+                    <columns>
+                        <TableColumn fx:id="jumlahColumn" prefWidth="98.0" text="Jumlah" />
+                        <TableColumn fx:id="totalHargaColumn" prefWidth="135.0" text="Total Harga" />
+                        <TableColumn fx:id="tanggalColumn" prefWidth="193.0" text="Tanggal" />
+                  <TableColumn fx:id="IDPelangganColumn" text="ID Pelanggan" />
+                  <TableColumn fx:id="IDBukuColumn" prefWidth="73.0" text="ID Buku" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </AnchorPane>
+    </Tab>
+</TabPane>
